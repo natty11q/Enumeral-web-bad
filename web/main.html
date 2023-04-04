@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>
+        ∑numeral Engine Web
+    </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    
+    <header>
+        <img class="logo"
+        src="../assets/images/icon_Enumeral_round.png"
+        alt="ENUMERAL LOGO!">
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Download</a>
+            <a href="#">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+
+        <div class="form-box login">
+            <nav class="login-signUp">
+                    <a herf = "#" onclick="translate_screen(1)" class = "login-link">Login</class></a>
+                    <a herf = "#" onclick="translate_screen(0)"  class = "Sign-Up-link">Sign-Up</class></a>
+            </nav>
+
+            <form action="#">
+                
+                <div class="input-box">
+                    
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+
+                    <input type="Email" id="Email_TB" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="Password" required>
+                    <label>Password</label>
+                </div>
+<!-- 
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="key"></ion-icon>
+                    </span>
+                    <input type="Confirm Password" required>
+                    <label>Confirm Password</label>
+                </div> -->
+
+                <div class="remember-forgot">
+                    <label >
+                        <input type="checkbox" onclick="remember_me()">Remember Me?
+                    </label>
+
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+
+
+            </form>
+        </div>
+
+
+        <div class="form-box Sign-Up">
+            <nav class="login-signUp">
+                <a>
+                </a>
+            </nav>
+
+            <form action="#">
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="Username" required>
+                    <label>Username</label>
+                </div>
+                
+                <div class="input-box">
+                    
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+
+                    <input type="Email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="Password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="key"></ion-icon>
+                    </span>
+                    <input type="Confirm Password" required>
+                    <label>Confirm Password</label>
+                </div>
+
+                <button type="submit" class="btn">Sign-Up</button>
+
+
+            </form>
+        </div>
+    </div>
+
+    <script src = "script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+
+</html>

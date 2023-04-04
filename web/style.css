@@ -1,0 +1,391 @@
+/* @import url('https://fonts'); */
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header
+{
+	position: fixed; /* may change this to relative */
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99;
+}
+
+body 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: url(../assets/images/TempENBGmoon.png);
+	background-size: cover;
+	background-position: center;
+
+	 
+}
+
+.logo
+{
+	width: 4.5%;
+	height: auto;
+	user-select: none;
+	background-repeat: none;
+}
+
+.navigation a
+{
+	position: relative;
+	font-size: 1.1em;
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 40px;
+}
+
+.navigation a::after
+{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	width: 100%;
+	height: 3px;
+	background: white;
+	border-radius: 5px;
+	transform: scaleX(0);
+	transition: .3s;
+}
+
+.navigation a:hover::after
+{
+	transform: scaleX(1);
+}
+
+
+.navigation .btnLogin-popup
+{
+	width: 130px;
+	height: 50px;
+	background: rgba(10, 10, 10, 0.2);
+	border: 2px solid white;
+	outline: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1.1em;
+	color: white;
+	font-weight: 500;
+	margin-top: -10px;
+	margin-left: 40px;
+	transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover 
+{
+	background: white;
+	color: #030524;
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* ***************************** MAIN WRAPPER *********************************** */
+
+.wrapper
+{
+	position: absolute;
+	width: 380px;
+	height: 500px;
+	background: rgba(100, 100, 100, 0.3);
+	border: 3px solid rgba(255, 255, 255,1);
+	border-radius: 10px;
+	backdrop-filter: blur(2px);;
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	transition: 2s;
+}
+
+.wrapper:hover 
+{
+	backdrop-filter: blur(50px);;
+	border-radius: 20px;
+	box-shadow: rgba(255, 255, 255, 0.5)
+} 
+
+.wrapper .form-box
+{
+	width: 100%;
+	padding: 40px;
+}
+
+.wrapper .icon-close
+{
+	position: absolute;
+	top: 10;
+	right: 0;
+	width : 45px; 
+	height: 45px;
+	background: white ;
+	font-size: 2em;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom-left-radius: 25px;
+	cursor: pointer;
+	z-index: 1;
+	transition: .20s;
+}
+
+.wrapper .icon-close:hover
+{
+	background: rgba(225,100,100, 0.5);
+	color: white;
+	border-bottom-left-radius: 20px ;
+	font-weight: 800;
+}
+
+
+/* ****************************** Toggle States  ************************************ */
+
+/* .wrapper .form-box.Sign-Up
+{
+	display: none;
+	
+}
+
+.wrapper .form-box.Sign-Up
+{
+	display: none;
+} */
+/* *****************************    FORM BOX     *********************************** */
+
+.form-box .login-signUp .login-link
+{
+	
+	position: absolute;
+	text-align: center;
+	text-transform: capitalize;
+	color: white;
+	width: 41%;
+	height: 45px;
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 1.4em;
+	font-weight: 500;
+	box-shadow: rgba(0,0,0, 0.3);
+	transition: .5s;
+	left: 9px;
+	top: 6px;
+	border-radius: 5px;
+}
+.form-box .login-signUp .login-link::after
+{
+	content: '';
+	position: absolute;
+	right: 4px;
+	bottom: -6px;
+	width: 130%;
+	height: 3px;
+	background: white;
+}
+
+
+.form-box .login-signUp .login-link:hover
+{
+	background: WHITE;
+	color: black;
+}
+
+
+.form-box .login-signUp .Sign-Up-link
+{
+	color: white;
+	text-align: center;
+	position: absolute;
+	width: 41%;
+	height: 45px;
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 1.4em;
+	font-weight: 500;
+	transition: .5s;
+	right: 3px;
+	top: 6px;
+	right: 50px;
+	border-radius: 5px;
+}
+
+.form-box .login-signUp .Sign-Up-link::after
+{
+	content: '';
+	position: absolute;
+	right: 4px;
+	bottom: -6px;
+	width: 130%;
+	height: 3px;
+	background: white;
+	transform: scaleX(1.6);
+}
+
+.form-box .login-signUp .Sign-Up-link:hover
+{
+	background: WHITE;
+	color: black;
+}
+
+/* ***************************** INPUT BOX *********************************** */
+
+
+
+
+.input-box
+{
+	top: 30px;
+	position: relative;
+	width: 100%;
+	height: 40px;
+	padding-top: 15px;
+	border-bottom: 2px solid white;
+	margin: 40px 0;
+}
+
+.input-box .icon
+{
+	position: absolute;
+	right: 8px;
+	top: -4px;
+	color: white;
+	font-size: 1.3em;
+	line-height: 57px;
+}
+
+.input-box label
+{
+	position: absolute;
+	top: 65%;
+	left: 5px;
+	transform: translateY(-50%);
+	font-size: 1em;
+	color: white;
+	font-weight: 500;
+	pointer-events: none;
+	transition: 0.3s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+	top: -4px;
+}
+
+
+.input-box input
+{
+	font-size: medium;
+	color: white;
+	width: 90%;
+	height: 95%;
+	font-weight: 600;
+	background: transparent;
+	border: none;
+	outline: none;
+	padding: 0 35px 0 5px;
+
+}
+
+/* ***************************** MREMBER FORGOR *********************************** */
+
+.remember-forgot
+{
+	font-size: .9em;
+	color: white;
+	font-weight: 500;
+	margin: 90px 0 15px;
+	display: flex;
+	justify-content: space-between;
+} 
+
+.remember-forgot label input
+{
+	accent-color: black;
+	margin-right: 5px;
+}
+
+.remember-forgot label :hover
+{
+	cursor: pointer;
+}
+
+.remember-forgot a
+{
+	
+	color: white;
+	text-decoration: none;
+	transition: .1s;
+}
+
+.remember-forgot a:hover
+{
+	text-decoration: underline;
+}
+
+.btn
+{
+	color: white;
+	width: 100%;
+	height: 45px;
+	border-radius: 6px;
+	background: transparent;
+	border: 2px solid white;
+	outline: none;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 500;
+	transition: .5s;
+	box-shadow: rgba(0,0,0, 0.3);
+	
+}
+
+.btn:hover
+{
+	color: black;
+	background: white;
+	box-shadow: rgba(255,255,255, 0.3);
+}
+
+
+
+.login-register
+{
+	font-size: .9em;
+	color: white ;
+	text-align: center;
+	font-weight: 500;
+	margin: 25px 0 10px;
+}
+
+.login-register p a
+{
+	font-weight: 600;
+	color: rgb(70, 16, 132);
+	text-decoration: none;
+}
+.login-register p a:hover
+{
+	text-decoration: underline;
+}
